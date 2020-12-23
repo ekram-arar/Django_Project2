@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+    </head>
+    <body>
+        About us page
+
+        <form action="/login" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="purpose" value="login">
+            <input id="emaillog" name="email" type="email" class="validate">
+            <label for="email">Email</label>
+            <input id="passwordlog" type="password" name="password" class="validate">
+            <label for="password">Password</label>
+            <button class="btn btn-primary" type="submit">Login</button>
+        </form>
+        <a href="/registration">Signup</a>
+    </body>
+</html>
